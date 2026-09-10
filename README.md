@@ -1,23 +1,17 @@
 # Java Projects ☕
 
-A practical **Java portfolio** focused on Core Java, OOP, Collections, exception handling and console-based application development.
+A practical **Java portfolio** focused on Core Java, Object-Oriented Programming, Collections, exception handling and console application development.
 
 ## 🚀 Projects
 
-### 🎓 Student Management System
-**Concepts:** OOP, classes/objects, `ArrayList`, searching and CRUD-style operations.
-
-### 🏦 Banking Management System
-**Concepts:** Encapsulation, validation, deposits, withdrawals and exception handling.
-
-### 📚 Library Management System
-**Concepts:** OOP, collections, book issue/return workflow and state management.
-
-### 🧠 Quiz Application
-**Concepts:** Arrays, loops, methods, user input and automatic scoring.
-
-### 💼 Employee Payroll System
-**Concepts:** Classes, salary calculations, allowances, deductions and payroll reporting.
+| Project | What it demonstrates |
+|---|---|
+| 🎓 [Student Management System](./StudentManagementSystem) | OOP, `ArrayList`, searching and record management |
+| 🏦 [Banking Management System](./BankingManagementSystem) | Encapsulation, validation and transaction handling |
+| 📚 [Library Management System](./LibraryManagementSystem) | Collections, book issue/return workflow |
+| 🧠 [Quiz Application](./QuizApplication) | Arrays, loops, methods and scoring |
+| 💼 [Employee Payroll System](./EmployeePayrollSystem) | Salary calculations and payroll reporting |
+| 🏧 [ATM Simulator](./ATM-Simulator) | Authentication, transactions and validation |
 
 ## 🛠️ Technologies
 
@@ -27,18 +21,7 @@ A practical **Java portfolio** focused on Core Java, OOP, Collections, exception
 - Exception Handling
 - Console I/O
 
-## ▶️ Running a Project
-
-From a project folder:
-
-```bash
-javac Main.java
-java Main
-```
-
-For classes with a different public class name, compile and run using that class name.
-
-## 📁 Repository Structure
+## 📁 Structure
 
 ```text
 java/
@@ -47,13 +30,23 @@ java/
 ├── LibraryManagementSystem/
 ├── QuizApplication/
 ├── EmployeePayrollSystem/
+├── ATM-Simulator/
 └── README.md
 ```
 
-## 🎯 Learning Outcomes
+## ▶️ Run Any Project
 
-This repository demonstrates practical Core Java skills and provides a foundation for **DSA, backend development and technical interviews**.
+Open a project directory and run:
+
+```bash
+javac Main.java
+java Main
+```
+
+## 🎯 Portfolio Goals
+
+These projects demonstrate practical Java fundamentals and provide a foundation for **DSA, backend development and technical interviews**.
 
 ---
 
-⭐ **Build small applications. Master Java. Move towards backend and DSA.**
+⭐ **Build small applications. Master Java. Move towards DSA and backend development.**
