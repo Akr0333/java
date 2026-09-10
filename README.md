@@ -1,42 +1,59 @@
 # Java Projects ☕
 
-A portfolio of practical **Java applications** built to strengthen core programming, Object-Oriented Programming and application-development skills.
+A practical **Java portfolio** focused on Core Java, OOP, Collections, exception handling and console-based application development.
 
 ## 🚀 Projects
 
-| Project | Concepts |
-|---|---|
-| 🎓 Student Management System | OOP, ArrayList, CRUD-style operations |
-| 🏦 Banking Management System | Encapsulation, validation, transactions |
-| 📚 Library Management System | OOP, collections, issue/return logic |
-| 🧠 Quiz Application | Arrays, loops, methods, scoring |
-| 💼 Employee Payroll System | Inheritance, polymorphism, salary calculations |
+### 🎓 Student Management System
+**Concepts:** OOP, classes/objects, `ArrayList`, searching and CRUD-style operations.
 
-## 🛠️ Tech Stack
+### 🏦 Banking Management System
+**Concepts:** Encapsulation, validation, deposits, withdrawals and exception handling.
 
-- Java
-- OOP: Encapsulation, Inheritance, Polymorphism
+### 📚 Library Management System
+**Concepts:** OOP, collections, book issue/return workflow and state management.
+
+### 🧠 Quiz Application
+**Concepts:** Arrays, loops, methods, user input and automatic scoring.
+
+### 💼 Employee Payroll System
+**Concepts:** Classes, salary calculations, allowances, deductions and payroll reporting.
+
+## 🛠️ Technologies
+
+- Java 17+
+- Object-Oriented Programming
 - Collections Framework
 - Exception Handling
-- File Handling
-- Console Application Development
+- Console I/O
 
-## ▶️ Run
+## ▶️ Running a Project
 
-Open a project folder and compile its Java file:
+From a project folder:
 
 ```bash
 javac Main.java
 java Main
 ```
 
-## 🎯 Learning Goals
+For classes with a different public class name, compile and run using that class name.
 
-- Build strong Java fundamentals
-- Practise OOP with real applications
-- Prepare for DSA and coding interviews
-- Create portfolio-ready projects
+## 📁 Repository Structure
+
+```text
+java/
+├── StudentManagementSystem/
+├── BankingManagementSystem/
+├── LibraryManagementSystem/
+├── QuizApplication/
+├── EmployeePayrollSystem/
+└── README.md
+```
+
+## 🎯 Learning Outcomes
+
+This repository demonstrates practical Core Java skills and provides a foundation for **DSA, backend development and technical interviews**.
 
 ---
 
-⭐ **Code in Java. Think in objects. Build real applications.**
+⭐ **Build small applications. Master Java. Move towards backend and DSA.**
