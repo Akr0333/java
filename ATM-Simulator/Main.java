@@ -1,67 +1,86 @@
 import java.util.Scanner;
 
-public class Main {
-    private static double balance = 25000.00;
-    private static final int PIN = 1234;
+class Account {
+    private double balance;
+    private final int pin;
 
-    static boolean authenticate(Scanner sc) {
-        System.out.print("Enter PIN: ");
-        return sc.nextInt() == PIN;
+    Account(double openingBalance, int pin) {
+        this.balance = openingBalance;
+        this.pin = pin;
     }
 
-    static void checkBalance() {
-        System.out.printf("Current balance: ₹%.2f%n", balance);
-    }
+    boolean verifyPin(int enteredPin) { return enteredPin == pin; }
+    double getBalance() { return balance; }
 
-    static void deposit(Scanner sc) {
-        System.out.print("Enter deposit amount: ₹");
-        double amount = sc.nextDouble();
-        if (amount <= 0) {
-            System.out.println("Amount must be positive.");
-            return;
-        }
+    boolean deposit(double amount) {
+        if (amount <= 0) return false;
         balance += amount;
-        System.out.println("Deposit successful.");
+        return true;
     }
 
-    static void withdraw(Scanner sc) {
-        System.out.print("Enter withdrawal amount: ₹");
-        double amount = sc.nextDouble();
-        if (amount <= 0) {
-            System.out.println("Amount must be positive.");
-        } else if (amount > balance) {
-            System.out.println("Insufficient balance.");
-        } else {
-            balance -= amount;
-            System.out.println("Withdrawal successful.");
-        }
+    boolean withdraw(double amount) {
+        if (amount <= 0 || amount > balance) return false;
+        balance -= amount;
+        return true;
     }
+}
+
+public class Main {
+    private static final int MAX_ATTEMPTS = 3;
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("=== ATM Simulator ===");
+        Account account = new Account(25000.00, 1234);
 
-        if (!authenticate(sc)) {
-            System.out.println("Invalid PIN. Access denied.");
+        System.out.println("╔════════════════════════════╗");
+        System.out.println("║       ATM SIMULATOR       ║");
+        System.out.println("╚════════════════════════════╝");
+
+        boolean authenticated = false;
+        for (int attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+            System.out.print("Enter PIN: ");
+            int pin = sc.nextInt();
+            if (account.verifyPin(pin)) {
+                authenticated = true;
+                break;
+            }
+            System.out.println("Incorrect PIN. Attempts left: " + (MAX_ATTEMPTS - attempt));
+        }
+
+        if (!authenticated) {
+            System.out.println("Account locked. Access denied.");
             sc.close();
             return;
         }
 
         while (true) {
-            System.out.println("\n1. Check Balance\n2. Deposit\n3. Withdraw\n4. Exit");
+            System.out.println("\n1. Check Balance");
+            System.out.println("2. Deposit");
+            System.out.println("3. Withdraw");
+            System.out.println("4. Exit");
             System.out.print("Choose: ");
             int choice = sc.nextInt();
 
             switch (choice) {
-                case 1 -> checkBalance();
-                case 2 -> deposit(sc);
-                case 3 -> withdraw(sc);
+                case 1 -> System.out.printf("Current balance: ₹%.2f%n", account.getBalance());
+                case 2 -> {
+                    System.out.print("Deposit amount: ₹");
+                    double amount = sc.nextDouble();
+                    System.out.println(account.deposit(amount) ? "Deposit successful." : "Invalid amount.");
+                }
+                case 3 -> {
+                    System.out.print("Withdrawal amount: ₹");
+                    double amount = sc.nextDouble();
+                    System.out.println(account.withdraw(amount)
+                            ? "Withdrawal successful."
+                            : "Invalid amount or insufficient balance.");
+                }
                 case 4 -> {
                     System.out.println("Thank you for using the ATM.");
                     sc.close();
                     return;
                 }
-                default -> System.out.println("Invalid choice.");
+                default -> System.out.println("Please choose a valid option.");
             }
         }
     }
