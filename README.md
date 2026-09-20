@@ -1,4 +1,6 @@
-# Java Projects ☕
+# ☕ Java Projects
+
+A practical Java portfolio demonstrating **object-oriented programming, collections, exception handling and application development**.
 
 A practical **Java portfolio** focused on Core Java, Object-Oriented Programming, Collections, exception handling and console application development.
 
