@@ -1,42 +1,23 @@
 # ☕ Java Projects
 
-A practical Java portfolio demonstrating **object-oriented programming, collections, exception handling and application development**.
+A practical **Core Java portfolio** demonstrating object-oriented programming, collections, validation and small application workflows.
 
-A practical **Java portfolio** focused on Core Java, Object-Oriented Programming, Collections, exception handling and console application development.
+## Projects
 
-## 🚀 Projects
-
-| Project | What it demonstrates |
+| Project | Skills demonstrated |
 |---|---|
-| 🎓 [Student Management System](./StudentManagementSystem) | OOP, `ArrayList`, searching and record management |
-| 🏦 [Banking Management System](./BankingManagementSystem) | Encapsulation, validation and transaction handling |
-| 📚 [Library Management System](./LibraryManagementSystem) | Collections, book issue/return workflow |
-| 🧠 [Quiz Application](./QuizApplication) | Arrays, loops, methods and scoring |
-| 💼 [Employee Payroll System](./EmployeePayrollSystem) | Salary calculations and payroll reporting |
-| 🏧 [ATM Simulator](./ATM-Simulator) | Authentication, transactions and validation |
+| 🎓 Student Management System | OOP, ArrayList, searching, records |
+| 🏦 Banking Management System | Encapsulation, validation, transactions |
+| 📚 Library Management System | Collections, issue/return workflow |
+| 🧠 Quiz Application | Arrays, loops, methods, scoring |
+| 💼 Employee Payroll System | OOP, salary calculation, reporting |
+| 🏧 ATM Simulator | Authentication, transactions, validation |
 
-## 🛠️ Technologies
+## Technologies
 
-- Java 17+
-- Object-Oriented Programming
-- Collections Framework
-- Exception Handling
-- Console I/O
+**Java 17+ · OOP · Collections · Exception Handling · Console I/O**
 
-## 📁 Structure
-
-```text
-java/
-├── StudentManagementSystem/
-├── BankingManagementSystem/
-├── LibraryManagementSystem/
-├── QuizApplication/
-├── EmployeePayrollSystem/
-├── ATM-Simulator/
-└── README.md
-```
-
-## ▶️ Run Any Project
+## Run
 
 Open a project directory and run:
 
@@ -45,10 +26,6 @@ javac Main.java
 java Main
 ```
 
-## 🎯 Portfolio Goals
+## Portfolio direction
 
-These projects demonstrate practical Java fundamentals and provide a foundation for **DSA, backend development and technical interviews**.
-
----
-
-⭐ **Build small applications. Master Java. Move towards DSA and backend development.**
+These projects provide evidence of Java fundamentals and support progression into DSA, backend development and technical interviews.
